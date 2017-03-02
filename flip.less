@@ -1,0 +1,19 @@
+a{ text-decoration: none; }
+/*! 分页 */
+.flip{
+	@len: 31px; @space: 2px;
+	margin-top: 50px;height: @len;text-align: center;
+	.element{ display: inline-block;margin-left: @space;margin-right: @space; }
+	.element>a.prev:after,
+	.element>a.next:after{ 
+		content: "";width: 100%;height: 10px;background-size: contain;display: block;background: center center no-repeat; 
+	}
+	.element>a.prev:after{ background-image: url('/Public/icon_left.png'); }
+	.element>a.next:after{ background-image: url('/Public/icon_right.png'); }
+	.element>a.omit{ border: none;cursor: default; }
+	a{ 
+		display: table-cell;background: transparent;border: 1px solid transparent;width: @len;height: @len;color: #808080;
+		vertical-align: middle;text-align: center;font-size: 12px;
+	}
+	a:hover,.active a{ border: 1px solid #CCCCCC; }
+}
